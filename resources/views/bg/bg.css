@@ -1,0 +1,12 @@
+body {
+  
+  background-image: url(https://www.pakutaso.com/shared/img/thumb/PAK86_komorebitohizashi_TP_V.jpg);  
+  /* 画像を常に上下左右の中央に配置させる */
+  background-position: center center; 
+  /* 画像を繰り返し表示しない */
+  background-repeat: no-repeat;  
+  /* ページなどのコンテンツの高さが画像の高さより大きい時動に固定する */
+  background-attachment: fixed; 
+  /* 画面、ブラウザのサイズに基づいて、背景画像を調整 */
+  background-size: cover;  
+}

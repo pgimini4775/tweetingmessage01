@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="text-center">
-        <h1>Sign up</h1>
+        <h1>サインアップ</h1>
     </div>
 
     <div class="row">
@@ -13,6 +13,13 @@
                     {!! Form::label('name', 'Name') !!}
                     {!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
                 </div>
+                
+                <div class="form-group">
+                    {!! Form::label('gender', 'Gender') !!} <br/>
+                    {!! Form::radio('gender', 'Male') !!} Male
+                    {!! Form::radio('gender', 'Female') !!} Female
+                </div>
+                
 
                 <div class="form-group">
                     {!! Form::label('email', 'Email') !!}
@@ -29,7 +36,7 @@
                     {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                 </div>
 
-                {!! Form::submit('Sign up', ['class' => 'btn btn-primary btn-block']) !!}
+                {!! Form::submit('サインアップする', ['class' => 'btn btn-primary btn-block']) !!}
             {!! Form::close() !!}
         </div>
     </div>

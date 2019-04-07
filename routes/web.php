@@ -22,6 +22,7 @@ Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login')->name('login.post');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
+
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
     Route::group(['prefix' => 'users/{id}'], function () { 
@@ -36,11 +37,14 @@ Route::group(['middleware' => 'auth'], function () {
         Route::delete('unfavo', 'FavoritesController@destroy')->name('user.unfavo');
         Route::get('favorite', 'UsersController@favorite')->name('users.favorite');
         Route::get('favo_user', 'UsersController@favo_user')->name('users.favo_user');
-        Route::post('nice', 'NicesController@store')->name('user.nice');
+        Route::post('good', 'NicesController@store')->name('user.good');
         Route::delete('bad', 'NicesController@destroy')->name('user.bad');
     });
     
     Route::resource('microposts', 'MicropostsController', ['only' => ['store', 'destroy']]);
     
+    Route::post('/upload', 'HomeController@upload');
+    
     
 });
+

@@ -7,5 +7,5 @@
     </div>
 </div>
 @include('user_follow.follow_button', ['user' => $user])
-@include('button.nice_button', ['user' => $user])
+
 

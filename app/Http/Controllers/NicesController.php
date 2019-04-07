@@ -8,7 +8,7 @@ class NicesController extends Controller
 {
      public function store(Request $request, $id)
     {
-        \Auth::user()->nice($id);
+        \Auth::user()->good($id);
        return redirect()->back();
     }
 
@@ -18,3 +18,4 @@ class NicesController extends Controller
         return redirect()->back();
     }
 }
+?>

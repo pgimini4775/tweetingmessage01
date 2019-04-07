@@ -18,9 +18,9 @@ class Micropost extends Model
         return $this->belongsToMany(User::class,'user_favorite','favorite_id','user_id')->withTimestamps();
     }
     
-    public function nice_user()
+    public function nices()
     {
-        return $this->belongsToMany(User::class,'user_nice','nice_id','user_id')->withTimestamps();
+      return $this->hasMany('App\Nice');
     }
 
 }

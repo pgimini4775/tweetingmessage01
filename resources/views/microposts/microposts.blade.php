@@ -8,7 +8,7 @@
                     {!! link_to_route('users.show',  $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $micropost->created_at }}</span>
                 </div>
                 <div>
-                    <p class="mb-0">{!! nl2br(e($micropost->content)) !!}</p>
+                    <p class="mb-1">{!! nl2br(e($micropost->content)) !!}</p>
                     @include('button.favorite_button', ['user' => $user])
                     @include('button.nice_button', ['user' => $user])
                 </div>
